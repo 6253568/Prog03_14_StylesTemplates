@@ -39,7 +39,7 @@ namespace Recursion
             racine.SousDossiers.Add(photos);
             
             tBlkBoucles.Text = $"Avec boucles: {TailleAvecBoucles(racine)} Ko";
-            tBlkRecursion.Text = $"Avec récursion: {TailleRecursion(racine)} Ko";
+            tBlkRecursion.Text = $"Avec récursion: {TailleRecursion(racine)} Ko"; //  Bonne valeur (1500 Ko)
         }
 
         private int TailleRecursion(Dossier racine)
@@ -48,8 +48,10 @@ namespace Recursion
 
             foreach (Dossier dossier in racine.SousDossiers)
             {
-                total += 
+                total += TailleRecursion(dossier); // Appel récursif
             }
+
+            return total;
         }
 
         // Sans récursion:

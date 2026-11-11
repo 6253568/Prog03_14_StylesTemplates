@@ -1,0 +1,17 @@
+﻿<Window x:Class="GestionExceptions.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionExceptions"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="15">
+            <TextBlock>Diviser 100 par:</TextBlock>
+            <TextBox x:Name="tBoxDiviseur" Margin="0,5,0,10"></TextBox>
+            <Button x:Name="btnDiviser">Diviser</Button>
+            <TextBlock x:Name="tBlkResultat" FontSize="16" Margin="0,10,0,0"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
